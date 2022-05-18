@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="icon/notes.ico" type="image/x-icon">
+    <title>Notes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Заметки</h1>
+        </div>
+    </header>
+
+    <section class="notes">
+        <div class="container">
+            <div class="notes__wrapper">
+                <div class="notes__create">
+                    <h2 class="notes__create__title">Создать заметку</h2>
+                    <div class="notes__create__circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="model-create">
+        <div class="container">
+            <div class="model-create__wrapper">
+                <div class="model-create__close">✘</div>
+                <h2 class="model-create__title">Создать заметку</h2>
+                <form action="#">
+                    <h3 class="model-create__heading">Заголовок</h3>
+                    <p class="model-create__text">Не больше 15 строк</p>
+                    <input name="heading" type="text" class="model-create__input" placeholder="Место ввода">
+                    <p id="errorHeading" class="model-create__error">Ошибка</p>
+                    <h3 class="model-create__heading">Tекст</h3>
+                    <textarea name="description"></textarea>
+                    <p id="errorDecription" class="model-create__error">Заполните поле</p>
+                    <span class="loader"></span>
+                    <button class="model-create__btn">Создать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="model-note">
+        <div class="container">
+            <div class="model-note__wrapper">
+                <div class="model-note__close">✘</div>
+                <h2 class="model-note__title">Заголовок</h2>
+                <p class="model-note__text"></p>
+            </div>
+        </div>
+    </section>
+<script src="js/bundle.js"></script>
+</body>
+</html>

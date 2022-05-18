@@ -1,0 +1,97 @@
+
+
+.container{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    padding: 20px 0;
+    &__title{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        padding-top: 5px;
+        border-bottom: 1px solid #000;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.notes{
+    padding: 80px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        gap: 18px;
+        justify-content: center;
+    }
+    &__create{
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 4px 20px 42px -2px rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        padding: 30px 0;
+        &__title{
+            font-weight: 700;
+            font-size: 26px;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+        }
+        &__circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid #000;
+            position: relative;
+            transition: 0.3s all;
+            cursor: pointer;
+            &:hover, &:focus{
+                outline: none;
+                border: 1px solid #F78434;
+                &::before, &::after{
+                    background: #F78434;
+                }
+            }
+            &::before{
+                content: '';
+                width: 30px;
+                height: 1px;
+                top: 50%;
+                transition: 0.3s all;
+                left: 50%;
+                position: absolute;
+                background: #000;
+                transform: translate(-50%, -50%);
+            }
+            &::after{
+                content: '';
+                width: 1px;
+                height: 30px;
+                top: 50%;
+                transition: 0.3s all;
+                left: 50%;
+                position: absolute;
+                background: #000;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@import 'modules/modalCreate';
+@import 'modules/pattern';
+@import 'modules/modalNote';
+
+@import 'media';
